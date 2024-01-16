@@ -1,0 +1,132 @@
+
+///// top nav styles start /////
+
+.top-nav {
+  background-color: #002147;
+
+  .address-links {
+    border-right: 1px solid #a3adb953;
+    a {
+      font-size: 12px;
+    }
+  }
+  a {
+    color: #a3adb9;
+    font-size: 16px;
+  }
+}
+
+///// top nav styles end /////
+
+///// main nav styles start //////
+
+.main-nav {
+  //// logo div styled start ////
+
+  .logo-div {
+    width: 250px;
+  }
+
+  /// responsive logo div style start///
+  @media (width <768px) {
+    .logo-div {
+      width: 200px;
+    }
+  }
+  /// responsive logo div style end ///
+  //// logo div styled end ////
+
+  //// main nav links start ////
+  .main-nav-links {
+    background-color: white !important;
+    z-index: 100;
+    // adding hover effect to main nav links tags //
+    > li > .nav-anchor {
+      position: relative;
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+      @media (width >= 992px) {
+        &::after {
+          transition: all 0.4s;
+          content: "";
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          height: 2px;
+          width: 0%;
+          background-color: red;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+  @media (width >= 992px) {
+    .about-us-links{
+      background:linear-gradient( 135deg , white 80%, rgba(0, 0, 0, 0.4)),url('http://www.pu.edu.pk/new/images/1.jpg') no-repeat center center /cover ;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left:0px;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+    /// about us section designing end ///
+    .about-section-toggle:hover ~ .about-us-links,.about-us-links:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+    /// about us section toggle end ///
+  }
+  
+  
+  @media (width <992px) {
+    .main-nav-links{
+      z-index: 100;
+      position: fixed;
+      top:0px;
+      right: 0px;
+      flex-direction: column;
+      width: 0%;
+      height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      visibility:hidden;
+      transition: all 0.6s ease-in-out;
+      a{
+        white-space: nowrap;
+      }
+
+      >li>a{
+        font-size: 18px;
+      }
+
+    }
+  }
+  /// nav links responsive end ///
+
+ 
+
+  //// main nav links end ////
+}
+///// main nav styleds end /////
+
+
+
+
+
+
+
+
+
+
+///// search field start /////
+.search-form input:focus{
+  outline: none;
+}
+///// search field end /////

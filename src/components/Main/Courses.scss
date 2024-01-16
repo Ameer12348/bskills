@@ -1,0 +1,9 @@
+.course-link{
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        scale: 1.05;
+
+    }
+}
